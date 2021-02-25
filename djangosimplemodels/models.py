@@ -70,6 +70,88 @@ class SimpleAddress(models.Model):
     )
 
 
+class SimpleCompany(models.Model):
+
+    
+    class Meta:
+        abstract = True
+        
+    name = models.CharField(
+        verbose_name="Nome",
+        max_length=254,
+    )
+
+    fantasy_name = models.CharField(
+        verbose_name="Nome Fantasia",
+        max_length=254,
+        blank=True,
+        null=True
+    )
+
+    email = models.EmailField(
+        verbose_name="E-Mail", 
+        max_length=254,
+        blank=True,
+        null=True
+    )
+
+    phone = models.CharField(
+        verbose_name="Telefone",
+        max_length=11,
+        blank=True,
+        null=True
+    )
+
+    fax = models.CharField(
+        verbose_name="Telefone",
+        max_length=11,
+        blank=True,
+        null=True
+    )
+
+    person = models.CharField(
+        verbose_name="Pessoa",
+        max_length=1,
+        choices=(
+            ("F", "Fisica"),
+            ("J", "Juridica"),
+        )
+    )
+
+    cpf = models.CharField(
+        verbose_name="CPF",
+        max_length=11,
+        blank=True,
+        null=True
+    )
+
+    cnpj = models.CharField(
+        verbose_name="CPF",
+        max_length=14,
+        blank=True,
+        null=True
+    )
+
+    state_registration = models.CharField(
+        verbose_name="Inscricao Estadual",
+        max_length=14,
+        blank=True,
+        null=True
+    )
+
+    date_open = models.DateField(
+        verbose_name="Data Nasc/Abertura",
+        blank=True,
+        null=True
+    )
+
+    note = models.TextField(
+        verbose_name="Observações",
+        blank=True,
+        null=True
+    )
+
+
 class SimpleVehicle(models.Model):
     
     class Meta:
