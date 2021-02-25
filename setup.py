@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name = 'djangosimplemodels',
-    version = '0.0.1',
+    version = '0.0.2',
     author = 'Julian de Almeida Santos',
     author_email = 'julian.santos.info@gmail.com',
     packages = ['djangosimplemodels'],
@@ -11,7 +11,7 @@ setup(
     url = 'https://github.com/juliansantosinfo/djangosimplemodels.git',
     project_urls = {
         'Código fonte': 'https://github.com/juliansantosinfo/djangosimplemodels.git',
-        'Download': 'https://github.com/juliansantosinfo/djangosimplemodels/archive/0.0.1.zip'
+        'Download': 'https://github.com/juliansantosinfo/djangosimplemodels/archive/0.0.2.zip'
     },
     license = 'MIT',
     keywords = 'simple models django',
